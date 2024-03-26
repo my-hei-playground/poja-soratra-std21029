@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@Entity
+@Entity(name = "taratasy")
 @Data
 @Builder
-@Table
+@Table(name = "taratasy")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Taratasy {

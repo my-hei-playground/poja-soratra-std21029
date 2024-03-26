@@ -21,11 +21,11 @@ public class TaratasyController {
     }
 
     @GetMapping(value = "{id}")
-    public Response getResponse(@PathVariable(name = "id") String id) {
+    public ResponseEntity<Response> getResponse(@PathVariable(name = "id") String id) {
         try {
-            return service.getResponse(id);
+            return ResponseEntity.ok(service.getResponse(id));
         } catch (Exception e) {
-            return null;
+            return ResponseEntity.ok().build();
         }
     }
 }
